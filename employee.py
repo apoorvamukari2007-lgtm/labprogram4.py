@@ -1,6 +1,14 @@
-from employee import employee_details
+import sys
 
-def test_employee_details():
-    result = employee_details("Rahul", "EMP101", "IT", "50000")
-    expected = "Name: Rahul\nEmployee ID: EMP101\nDepartment: IT\nsalary: 50000"
-    assert result == expected
+def employee_details(name, employee_id, department, salary):
+    return f"Name: {name}\nEmployee ID: {employee_id}\nDepartment: {department}\nsalary: {salary}"
+
+if __name__== "__main__":
+    name = sys.argv[1]
+    employee_id = sys.argv[2] 
+    department = sys.argv[3]
+    salary = sys.argv[4]
+
+    print("\n Employee Details")
+    print("------------------")
+    print(employee_details(name, employee_id, department, salary))
